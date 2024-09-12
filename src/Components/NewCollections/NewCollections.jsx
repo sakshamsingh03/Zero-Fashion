@@ -12,6 +12,7 @@ const NewCollections = () => {
             {new_collection.map((item,i)=>{
                 return <Item
                             key={item.id}
+                            id={item.id}
                             name={item.name} 
                             image={item.image} 
                             new_price={item.new_price} 
