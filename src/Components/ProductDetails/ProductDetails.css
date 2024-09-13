@@ -66,6 +66,10 @@
     margin: 15px 0px; 
     gap: 15px; 
 }
+.productdetails-right-sizes div:hover {
+    background: #ff4141;
+    color: white;
+}
 .productdetails-right-sizes div {
     padding: 12px 18px; 
     background: #fbfbfb;
@@ -73,17 +77,74 @@
     border-radius: 8px; 
     cursor: pointer;
 }
-.productdetails-right button{
+.productdetails-right .addToCart{
     padding: 20px 40px;
     width: 200px;
     font-size: 16px;
     font-weight: 600;
     color: white;
     background: #ff4141;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     border: none;
     outline: none;
     cursor: pointer;
     border: 1px solid #ff4141;
     border-radius: 2px;
 }
+.productdetails-right .addToCart:hover{
+    background: white;
+    color:#ff4141;
+}
+.button-container {
+    display: flex;
+    align-items: center; 
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.increment, .decrement {
+    width: 30px;
+    height: 30px;
+    background-color: #ff4141;
+    color: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.increment:hover, .decrement:hover {
+    background-color: #ff6161;
+}
+
+.increment:active, .decrement:active {
+    background-color: #ff2525;
+}
+
+.button-container .count {
+    width: 30px; 
+    height: 30px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    background-color: #f9f9f9;
+}
+.productdetails-right-category{
+    margin-top: 10px;
+}
+.productdetails-right-category span{
+    font-weight: 600;
+}
+
+
+
+
+
+
+
