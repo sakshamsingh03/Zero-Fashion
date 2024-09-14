@@ -1,0 +1,135 @@
+.cartitems{
+    margin: 100px 100px;
+}
+.cartitems hr{
+    height: 3px;
+    background: #e2e2e2;
+    border: 0;
+}
+.cartitems-format-main{
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 75px;
+    padding: 20px 0px;
+    color: #454545;
+    font-size: 18px;
+    font-weight: 600;
+}
+.cartitems-format{
+    font-size: 17px;
+    font-weight: 500;
+}
+.carticon-product-icon{
+    height: 62px;
+}
+.cartitems-remove-icon{
+    width: 15px;
+    margin: 0px 40px;
+    cursor: pointer;
+}
+.cartitems-quantity{
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgb(118, 116, 115);
+    background: #fff;
+}
+.cartitems-down{
+    display: flex;
+    margin: 40px 0px;
+}
+.cartitems-total{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-right: 200px;
+    gap: 15px;
+}
+.cartitems-total-item{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0px;
+}
+.cartitems-total button{
+    width: 262px;
+    height: 58px;
+    background: #ff5a5a;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid #ff4141;
+    border-radius: 2px;
+}
+.cartitems-total button:hover{
+     background: white;
+    color:#ff4141;
+}
+.cartitems-promocode{
+    flex: 1;
+    font-size: 16px;
+    font-weight: 500;
+}
+.cartitems-promocode p{
+    color: #555;
+}
+.caritems-promobox{
+    width: 504px;
+    margin-top: 15px;
+    padding-left: 20px;
+    height: 58px;
+    background: #eaeaea;
+}
+.cartitems-promobox input{
+    border: 1px solid rgb(82, 81, 81);
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    width: 250px;
+    height: 30px;
+    margin-top: 5px;
+}
+.cartitems-promobox button{
+    width: 140px;
+    height: 35px;
+    border-radius: 2px;
+    font-size: 16px;
+    font-weight: 600;
+    border: 1px solid #ff4141;
+    background: #ff5a5a;
+    color: #fff;
+    cursor: pointer;
+}
+.cartitems-promobox button:hover{
+    background: white;
+    color:#ff4141;
+}
+.cart-empty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40vh; 
+    text-align: center;
+  }
+  
+  .cart-empty p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .cart-empty a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #ff4141;
+    background-color: #f2f2f2;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .cart-empty a:hover {
+    background-color: #ff4141;
+    color: white;
+  }
+  
