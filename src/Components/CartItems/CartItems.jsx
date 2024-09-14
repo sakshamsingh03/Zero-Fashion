@@ -2,12 +2,11 @@ import React, { useContext } from 'react';
 import './CartItems.css';
 import { ShopContext } from '../../Context/ShopContext';
 import remove_icon from '../Assets/cart_cross_icon.png';
-import { Link } from 'react-router-dom'; // Assuming you're using react-router-dom for navigation
+import { Link } from 'react-router-dom';
 
 const CartItems = () => {
   const { getTotalCartAmount, all_product, cartItems, removeFromCart } = useContext(ShopContext);
 
-  // Filter products that are in the cart (quantity > 0)
   const productsInCart = all_product.filter((product) => cartItems[product.id] > 0);
 
   return (
