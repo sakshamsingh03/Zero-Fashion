@@ -16,6 +16,9 @@ const Navbar = () => {
             <img src={logo} alt="" />
             <p>Zero Fashion</p>
         </div>
+        <div className='search-bar'>
+          <input type="text" placeholder='Search' />
+        </div>
         <ul className="nav-menu">
           <li onClick={()=>{setMenu("shop")}}><Link style={{textDecoration:'none'}} to='/'>Shop</Link>{menu==="shop"?<hr/>:<></>}</li>
           <li onClick={()=>{setMenu("mens")}}><Link style={{textDecoration:'none'}} to='/mens'>Men</Link>{menu==="mens"?<hr/>:<></>}</li>
