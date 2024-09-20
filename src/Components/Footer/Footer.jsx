@@ -24,7 +24,7 @@ const Footer = () => {
             </div>
             <div className="footer-icons-container">
                 <img src={whatsaop_icon} alt="" />
-            </div> {/* Corrected closing tag */}
+            </div> 
         </div>
         <div className="footer-copyright">
             <hr />
