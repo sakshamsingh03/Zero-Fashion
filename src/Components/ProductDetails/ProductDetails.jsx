@@ -1,26 +1,49 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState } from 'react';
 import './ProductDetails.css';
 import star_icon from '../Assets/star_icon.png';
 import star_dull_icon from '../Assets/star_dull_icon.png';
 import { ShopContext } from '../../Context/ShopContext';
+import Toastify from 'toastify-js';
+import "toastify-js/src/toastify.css";
 
 const ProductDetails = (props) => {
     const { product } = props;
     const { addToCart } = useContext(ShopContext);
-    const [count, setCount] = useState(1); 
+    const [count, setCount] = useState(1);
 
     const handleIncrement = () => {
-        if (count < 5) { 
+        if (count < 5) {
             setCount(count + 1);
         }
     };
 
     const handleDecrement = () => {
-        if (count > 1) { 
+        if (count > 1) {
             setCount(count - 1);
         }
     };
 
+    const handleAddToCart = () => {
+        addToCart(product.id, count);
+        Toastify({
+            text: `
+                <div style="display: flex; align-items: center;">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 48 48" style="margin-right: 8px;">
+                        <path fill="#c8e6c9" d="M36,42H12c-3.314,0-6-2.686-6-6V12c0-3.314,2.686-6,6-6h24c3.314,0,6,2.686,6,6v24C42,39.314,39.314,42,36,42z"></path>
+                        <path fill="#4caf50" d="M34.585 14.586L21.014 28.172 15.413 22.584 12.587 25.416 21.019 33.828 37.415 17.414z"></path>
+                    </svg>
+                    ${count} ${count === 1 ? 'item added to cart successfully!' : 'items added to cart successfully!'}
+                </div>
+            `,
+            duration: 3000,
+            gravity: "top",  
+            position: "right", 
+            backgroundColor: "#4caf50",
+            escapeMarkup: false,
+        }).showToast();
+        
+    };
+console.log("product",product)
     return (
         <div className='productdetails'>
             <div className="productdetails-left">
@@ -62,7 +85,7 @@ const ProductDetails = (props) => {
                      <button className="decrement" onClick={handleDecrement}>-</button>
                 </div>
 
-                <button className='addToCart' onClick={() => { addToCart(product.id, count) }}>ADD TO CART</button>
+                <button className='addToCart' onClick={handleAddToCart}>ADD TO CART</button>
                 <p className='productdetails-right-category'><span>Tags :</span>Modern, Latest </p>
             </div>
         </div>

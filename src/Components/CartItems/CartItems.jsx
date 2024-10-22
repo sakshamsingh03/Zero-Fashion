@@ -8,7 +8,7 @@ const CartItems = () => {
   const { getTotalCartAmount, all_product, cartItems, removeFromCart } = useContext(ShopContext);
 
   const productsInCart = all_product.filter((product) => cartItems[product.id] > 0);
-
+console.log(productsInCart,"product")
   return (
     <div className="cartitems">
       {productsInCart.length > 0 ? (
